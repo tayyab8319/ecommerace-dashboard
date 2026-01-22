@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { LoginForm } from "./LoginForm";
 import { loginStyles } from "./style";
-import LoginCoverImage from "@/static/images/login-cover-01.jpg";
+import { LoginVector } from "@/components/vectors/LoginVector";
 import { Typography } from "@/components/ui/Typography";
 
 export default function Login() {
@@ -11,11 +11,9 @@ export default function Login() {
     <div className={loginStyles.container}>
       <div className={loginStyles.content}>
         <div className={loginStyles.loginCoverContainer}>
-          <Image
-            className={loginStyles.coverImage}
-            src={LoginCoverImage}
-            alt=""
-          />
+          <div className={loginStyles.coverImage}>
+            <LoginVector />
+          </div>
         </div>
         <div className={loginStyles.formWrapper}>
           <Image src={Logo} alt="logo" width={110} height={110} />
